@@ -16,7 +16,7 @@ fun <T : Any> Iterable<T>.cycle(): Sequence<T> = sequence {
     while (true) {for (elem in saved) yield(elem)}
 }
 
-fun main(args: Array<String>) {
+fun main() {
 
     println("This program is encrypting a text from txt file with Viegener algorythm")
     println("Written by Melnik")
@@ -177,8 +177,8 @@ fun decrypt(word:String = "", key:String = ""):String {
     for (x in word) {initialText.add(x)}
     for (x in key)  {initialKey.add(x)}
     var fileIter:Int = 0
-    val fileName = "demo_$fileIter.txt"
-    val file = File(fileName)
+    var fileName = "demo_$fileIter.txt"
+    var file = File(fileName)
 
     var iter:Int = 0
     var i:Int = 0
